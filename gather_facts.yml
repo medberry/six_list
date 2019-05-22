@@ -1,6 +1,6 @@
 ---
-- name: Gather Facts on Centos
-  hosts: ~centos
+- name: Gather Facts
+  hosts: all
   gather_facts: false #we'll do this below
   become: true #this could be run as a mortal, but we'll use sudo root here
 
