@@ -1,0 +1,12 @@
+---
+- name: Ping Centos machines
+  hosts: ~centos
+  # become: yes not necessary for ping
+
+  vars:
+  # not necessary for this simple ping test
+
+  tasks:
+  - name: Pinging!
+    ping:
+    
