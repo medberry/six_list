@@ -1,0 +1,10 @@
+---
+- name: This playbook can be run on nodes WITHOUT python
+  hosts: all
+  gather_facts: false
+  become: false
+
+  tasks:
+  - name: Whoami or similar
+    raw: whoami
+    
