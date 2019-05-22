@@ -2,6 +2,7 @@
 - name: Ping Centos machines
   hosts: ~centos
   # become: yes not necessary for ping
+  gather_facts: false
 
   vars:
   # not necessary for this simple ping test
