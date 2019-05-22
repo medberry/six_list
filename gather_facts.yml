@@ -1,0 +1,10 @@
+---
+- name: Gather Facts on Centos
+  hosts: ~centos
+  gather_facts: false #we'll do this below
+  become: true #this could be run as a mortal, but we'll use sudo root here
+
+  tasks:
+  - name: Gather facts with the setup module
+    setup:
+    
