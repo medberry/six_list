@@ -7,4 +7,17 @@
   tasks:
   - name: Whoami or similar
     raw: whoami
+  
+  - name: uptime
+    raw: uptime
+
+  - name: internet info
+    raw: ip a
+
+  - name: outernet info
+    raw: curl ifconfig.co
+
+  - name: metadata
+    raw: curl http://169.254.169.254/latest/meta-data/public-ipv4
+
     
