@@ -30,7 +30,7 @@
       - "user: {{iam.stdout}}"
       - "uptime: {{up.stdout}}"
       - "IP Info: "
-      - {{intranet.stdout_lines[10]}}
-      - {{publicip.stdout}}"
+      - "{{intranet.stdout_lines[10]}}""
+      - "{{publicip.stdout}}"
 
     
