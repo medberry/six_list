@@ -29,7 +29,7 @@
       msg:
       - "user: {{iam.stdout}}"
       - "uptime: {{up.stdout}}"
-      - "Private IP: {{intranet.stdout_lines[7]|ipv4}}"
-      - "Public IP: {{publicip.stdout|ipv4}}"
+      - "Private IP: {{intranet.stdout_lines[7] | regex_findall('\\b(?:[0-9]{1,3}\\.){3}[0-9]{1,3}\\b')}}"
+      - "Public IP: {{publicip.stdout | ipv4}}"
 
     
