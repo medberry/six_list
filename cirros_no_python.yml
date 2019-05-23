@@ -7,17 +7,28 @@
   tasks:
   - name: Whoami or similar
     raw: whoami
+    register: iam
   
   - name: uptime
     raw: uptime
+    register: up
 
   - name: internet info
     raw: ip a
+    register: intranet
 
   - name: outernet info
     raw: curl ifconfig.co
 
   - name: metadata
     raw: curl http://169.254.169.254/latest/meta-data/public-ipv4
+    register: publicip
+
+  - name: report output
+    debug:
+      msg:
+      - "user: {{iam.stdout}}"
+      - "uptime: {{up.stdout}}"
+      - "IP Info: {{intranet.stdout}} {{publicip.stdout}}"
 
     
