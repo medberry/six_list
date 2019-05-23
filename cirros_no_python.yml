@@ -29,8 +29,7 @@
       msg:
       - "user: {{iam.stdout}}"
       - "uptime: {{up.stdout}}"
-      - "IP Info: "
-      - "{{intranet.stdout_lines[7]}}"
-      - "{{publicip.stdout}}"
+      - "Private IP: {{intranet.stdout_lines[7]}}"
+      - "Public IP: {{publicip.stdout}}"
 
     
